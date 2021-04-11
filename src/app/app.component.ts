@@ -39,7 +39,7 @@ export class AppComponent {
             title: 'Add a new Task',
             selector: '.input-container',
             content: 'To add a new task, just type in the name of the task and press enter to add it.',
-            orientation: Orientation.Right
+            orientation: Orientation.Bottom
         },
         {
             title: 'Tasks loaded',
@@ -51,7 +51,7 @@ export class AppComponent {
             title: 'Tasks not finished',
             selector: '.list-footer > p',
             content: 'This displays the numbers of tasks that has not been completed yet.',
-            orientation: Orientation.Left
+            orientation: Orientation.Bottom
         },
         {
             title: 'Filter tasks',
@@ -63,7 +63,7 @@ export class AppComponent {
             title: 'Delete all tasks',
             selector: '.list-footer button',
             content: 'To delete all tasks press this button',
-            orientation: Orientation.Right
+            orientation: Orientation.Bottom
         },
         {
             title: 'Enjoy!',
