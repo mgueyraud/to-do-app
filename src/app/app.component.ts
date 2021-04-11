@@ -60,9 +60,9 @@ export class AppComponent {
             orientation: Orientation.Bottom
         },
         {
-            title: 'Delete all tasks',
+            title: 'Clear Completed Tasks',
             selector: '.list-footer button',
-            content: 'To delete all tasks press this button',
+            content: 'To delete all the tasks that has been completed',
             orientation: Orientation.Bottom
         },
         {
@@ -131,7 +131,8 @@ export class AppComponent {
   }
 
   clearTasks(){
-    this.tasks = [];
+    this.tasks = this.tasks.filter((item: Task) => !item.hasCompleted);
+    this.displayTasks = [...this.tasks];
   }
 
 }
