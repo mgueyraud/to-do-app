@@ -169,6 +169,15 @@ header{
     }
 }
 
+.btn{
+    margin-top: 20px;
+    background-color: var(--list-item-bg);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+}
+
 @media (max-width:768px){
     .list-footer{
         font-size: 11px;

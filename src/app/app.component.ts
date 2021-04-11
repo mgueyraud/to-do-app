@@ -135,4 +135,8 @@ export class AppComponent {
     this.displayTasks = [...this.tasks];
   }
 
+  restartTour(): void {
+    this.guidedTourService.startTour(this.tour);
+  }
+
 }
