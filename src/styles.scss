@@ -1,1 +1,74 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+//=================Tokens==================
+
+$dodger-blue: hsl(220, 98%, 61%);
+
+//Light theme
+$alabaster: hsl(0, 0%, 98%);
+$snuff: hsl(236, 33%, 92%);
+$mischka: hsl(233, 11%, 84%);
+$manatee: hsl(236, 9%, 61%);
+$mulled-wine: hsl(235, 19%, 35%);
+
+//Dark Theme
+$cinder: hsl(235, 21%, 11%);
+$ebony-clay: hsl(235, 24%, 19%);
+$periwinkle-gray: hsl(234, 39%, 85%);
+$waterloo: hsl(234, 11%, 52%);
+$trout: hsl(233, 14%, 35%);
+$bright-gray: hsl(237, 14%, 26%);
+
+//Declaration of variables for specific colors
+$primary: $dodger-blue;
+
+//Sizes
+$max-width: 1440px;
+$default-font: 18px;
+
+//Font
+$default-family: 'Josefin Sans', sans-serif;
+
+
+// ========= Initialization =================
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+html, body{
+    overflow-x: hidden;
+    font-family: $default-family;
+}
+
+.container{
+    transition: all .4s;
+
+    --text-color: #{$mulled-wine};
+    --list-item-bg: #{$alabaster};
+    --title-color: #{$alabaster};
+    
+    &.container--dark{
+        --bg-body: #{$cinder};
+        --text-color: #{$alabaster};
+        --list-item-bg: #{$ebony-clay};
+    }
+    background-color: var(--bg-body);
+    color: var(--text-color);
+    width: 100%;
+    height: 100vh;
+}
+
+@media (max-width:768px){
+    .container{
+        padding: 0 20px;
+    }
+}
+
+
+@import '../node_modules/ngx-guided-tour/scss/guided-tour-base-theme.scss';
